@@ -43,6 +43,7 @@ html, body, .wrapper {
         grid-area: sidebar;
         background-color: rgb(224, 35, 66);
         height: calc(100vh - 8rem);
+        display: initial;
       }
 
       .container {
