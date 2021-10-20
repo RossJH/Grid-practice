@@ -16,23 +16,42 @@ html, body, .wrapper {
     grid-template-rows: 4rem 1fr 4rem;
     grid-template-areas:
       "header header"
-      "sidebar content"
+      "content content"
       "footer footer";
 }
 .header {
   grid-area: header;
   background-color: rgb(191, 230, 173);
 }
-.sidebar {
-  grid-area: sidebar;
-  background-color: rgb(224, 35, 66);
-  height: calc(100vh - 8rem);
+
+.sidebar{
+   display: none;
 }
 .content {
   grid-area: content;
   background-color: rgb(163, 163, 163);
+  height: calc(100vh - 8rem);
 }
 .footer {
   grid-area: footer;
   background-color: rgb(171, 18, 241);
+}
+
+
+@media screen and (min-width:568px){
+    .sidebar {
+        grid-area: sidebar;
+        background-color: rgb(224, 35, 66);
+        height: calc(100vh - 8rem);
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 12rem 1fr;
+        grid-template-rows: 4rem 1fr 4rem;
+        grid-template-areas:
+          "header header"
+          "sidebar content"
+          "footer footer";
+    }
 }
